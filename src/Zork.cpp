@@ -5,7 +5,12 @@
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    std::cout << "Test build, check check check!\n";
+
+    std::cout << "\nPress Enter to exit...";
+    std::cin.get(); 
+
+    return 0;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
