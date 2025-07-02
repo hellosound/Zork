@@ -1,0 +1,10 @@
+# Ignore build output and VS files
+.vs/
+build/
+Release/
+*.suo
+*.user
+*.vcxproj.*
+*.exe
+*.obj
+*.log
