@@ -13,16 +13,27 @@ public:
 		ITEM
 	};
 
-	Entity(const std::string& name, const std::string& description, EntityType type, const std::list<Entity>& contains);
+	Entity(const std::string& name, const std::string& description, EntityType type);
+	//virtual ~Entity();
+
 
 	virtual void Update();
+
+	const std::string& GetName() const;
+	const std::string& GetDescription()const;
+	EntityType GetType() const;
+
+
+	void AddEntity(Entity* entity);
+	void RemoveEntity(Entity* entity);
+	const std::list<Entity*>& GetContents() const;
 
 protected:
 
 	std::string name;
 	std::string description;
 	EntityType type;
-	std::list<Entity> contains;
+	std::list<Entity*> contains;
 };
 	
 
