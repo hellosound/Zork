@@ -12,18 +12,21 @@ public:
 		ENEMY,
 		ITEM
 	};
-
+	
+	//Constructor declaration
 	Entity(const std::string& name, const std::string& description, EntityType type);
-	//virtual ~Entity();
 
+	//Destructor declaration
+	virtual ~Entity();
 
 	virtual void Update();
 
+	//Getter functions
 	const std::string& GetName() const;
 	const std::string& GetDescription()const;
 	EntityType GetType() const;
 
-
+	//Functions to dinamically add and remove entities on other Entities.
 	void AddEntity(Entity* entity);
 	void RemoveEntity(Entity* entity);
 	const std::list<Entity*>& GetContents() const;

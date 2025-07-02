@@ -20,9 +20,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\Entity.h" />
+    <ClInclude Include="..\..\src\Room.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\Entity.cpp" />
+    <ClCompile Include="..\..\src\Room.cpp" />
     <ClCompile Include="..\..\src\Zork.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

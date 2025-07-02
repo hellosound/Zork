@@ -40,3 +40,13 @@ const std::list<Entity*>& Entity::GetContents() const
    return contains;  
 }
 
+//---------------------------------------------------------------------------------------------------------------
+
+Entity::~Entity()
+{
+	for (Entity* e : contains)
+	{
+		delete e;
+	}
+}
+
