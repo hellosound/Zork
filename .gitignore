@@ -1,10 +1,27 @@
-# Ignore build output and VS files
+# Visual Studio user-specific files
 .vs/
-build/
-Release/
-*.suo
 *.user
-*.vcxproj.*
-*.exe
+*.suo
+
+# Build output folders
+Debug/
+Release/
+x64/
+
+# Build output files
 *.obj
+*.exe
+*.pdb
+*.ilk
 *.log
+*.tlog
+*.lastbuildstate
+*.idb
+*.cache
+*.opensdf
+*.sdf
+
+# Temporary or backup files
+*.tmp
+*.bak
+*~
