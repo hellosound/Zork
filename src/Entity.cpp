@@ -1,5 +1,6 @@
 #include "Entity.h"
 #include <algorithm>
+#include <iostream>
 
 Entity::Entity(const std::string& name, const std::string& description, EntityType type)
 	:name(name), description(description), type(type)
@@ -10,11 +11,13 @@ Entity::Entity(const std::string& name, const std::string& description, EntityTy
 void Entity::Update()
 {
 }
+
 //---------------------------------------------------------------------------------------------------------------
 const std::string& Entity::GetName() const
 {
 	return name;
 }
+
 //---------------------------------------------------------------------------------------------------------------
 const std::string& Entity::GetDescription() const
 {
@@ -22,7 +25,12 @@ const std::string& Entity::GetDescription() const
 }
 
 //---------------------------------------------------------------------------------------------------------------
+Entity::EntityType Entity::GetType() const
+{
+	return type;
+}
 
+//---------------------------------------------------------------------------------------------------------------
 void Entity::AddEntity(Entity* entity)
 {
 	contains.push_back(entity);
@@ -50,3 +58,4 @@ Entity::~Entity()
 	}
 }
 
+//---------------------------------------------------------------------------------------------------------------

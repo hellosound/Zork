@@ -29,6 +29,7 @@ public:
 	//Functions to dinamically add and remove entities on other Entities.
 	void AddEntity(Entity* entity);
 	void RemoveEntity(Entity* entity);
+	
 	const std::list<Entity*>& GetContents() const;
 
 protected:

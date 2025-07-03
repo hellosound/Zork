@@ -11,12 +11,12 @@ int main()
     std::cout << "Hello ZORK!\n";
 
 
-    Entity* TestRoom = new Entity("TestRoom", "A room with 4 doors, the front one is bigger and mysterious", Entity::ROOM);
+    /**/Entity* TestRoom = new Entity("TestRoom", "A room with 4 doors, the front one is bigger and mysterious", Entity::ROOM);
     Entity* Monster = new Entity("Monster", "A large monster with wings and a golden neclace", Entity::ENEMY);
     Entity* Key = new Entity("Key", "Rusty Key", Entity::ITEM);
     Entity* Bag = new Entity("Bag", "Old Bag", Entity::ITEM);
 
-    Entity* LivingRoom = new Room ("Living Room", "A small living room");
+    Room* LivingRoom = new Room ("Living Room", "a small living room");
 
 
     TestRoom->AddEntity(Monster);
@@ -46,13 +46,17 @@ int main()
     std::cout << "Room:" << TestRoom->GetName() << "-" << TestRoom->GetDescription() << std::endl;
     std::cout << "Contains" << std::endl;
 
-
     for (Entity* entity : TestRoom->GetContents())
     {
         std::cout << "-" << entity->GetName() << std::endl;
     }
 
     LivingRoom->Update();
+
+    LivingRoom->AddEntity(Bag);
+
+    LivingRoom->Update();
+
 
 
     std::cout << "\nPress Enter to exit...";
