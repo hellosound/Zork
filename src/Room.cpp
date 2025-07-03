@@ -12,7 +12,7 @@ void Room::Update()
 {
 	PresentRoom();
     CheckIfHasObjects();
-    ListRoomObjects();
+    TryListRoomObjects();
 }
 
 //---------------------------------------------------------------------------------------------------------------
@@ -38,7 +38,7 @@ void Room::CheckIfHasObjects()
 }
 
 //---------------------------------------------------------------------------------------------------------------
-void Room::ListRoomObjects()
+void Room::TryListRoomObjects()
 {
     if (!bHasObjects)
     {

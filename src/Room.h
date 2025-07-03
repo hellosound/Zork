@@ -13,9 +13,10 @@ public:
 
     void CheckIfHasObjects();
 
-    void UpdateRoomObjects();
+    //For when we have to add or remove objects from the room
+    //void UpdateRoomObjects();
 
-    void ListRoomObjects();
+    void TryListRoomObjects();
 
 private:
 
