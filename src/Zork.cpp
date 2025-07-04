@@ -5,82 +5,36 @@
 #include "Entity.h"
 #include "Room.h"
 #include "Exit.h"
+#include "Player.h"
 
 
 int main()
 {
-    std::cout << "Hello ZORK!\n";
-
-
-    /*Entity* TestRoom = new Entity("TestRoom", "A room with 4 doors, the front one is bigger and mysterious", Entity::ROOM);
-    Entity* Monster = new Entity("Monster", "A large monster with wings and a golden neclace", Entity::ENEMY);
-    Entity* Key = new Entity("Key", "Rusty Key", Entity::ITEM);
-    Entity* Bag = new Entity("Bag", "Old Bag", Entity::ITEM);*/
+    // ROOM MOVEMENT TEST.
+  
+ 
 
     //Create Rooms
-    Room* LivingRoom = new Room ("Living Room", "a place full of old furniture, you wonder how many stories happened her");
+    Room* LivingRoom = new Room("Living Room", "a place full of old furniture, you wonder how many stories happened her");
     Room* Kitchen = new Room("Kitchen", "a small kitchen, looks like it hasn't been used in a long time...");
+
 
     //Create Exits
     Exit* LivingRoomNorthExit = new Exit("NORTH", Kitchen);
-
-    //Build rooms and exits
     LivingRoom->AddEntity(LivingRoomNorthExit);
-    LivingRoom->Update();
 
-    //Perform a movement between rooms
+    //Add Objects
 
-    for (Entity* entity : LivingRoom->GetContents())
-    {
-        if (entity->GetType() == Entity::EXIT)
-        {
-            Exit* exit = dynamic_cast<Exit*>(entity);
-            
-            if (exit != nullptr)
-            {
-                Room* destination = exit->GetDestination();
-                destination->Update();
-            }
-        }
-    }
+    Entity* bag = new Entity("Bag", "A bag that looks to contain some coins", Entity::ITEM);
+    Kitchen->AddEntity(bag);
 
-    /*  TestRoom->AddEntity(Monster);
-    TestRoom->AddEntity(Key);
+ 
+    //CreatePlayer
+    Player* mainPlayer = new Player("Jonathan", "A wondering young person", LivingRoom);
 
-    std::cout << "Room:" << TestRoom->GetName() << "-" << TestRoom->GetDescription() << std::endl;
-    std::cout << "Contains" << std::endl;
+    //PLAYER MOVEMENT TEST
+    mainPlayer->TryToMoveToRoom("NORTH");
 
-    for (Entity* entity : TestRoom->GetContents())
-    {
-        std::cout << "-" << entity->GetName() << std::endl;
-    }
-
-    TestRoom->RemoveEntity(Monster); //First Remove the pointer
-    delete Monster; //Then remove the entity
-
-    std::cout << "Room:" << TestRoom->GetName() << "-" << TestRoom->GetDescription() << std::endl;
-    std::cout << "Contains" << std::endl;
-
-
-    for (Entity* entity : TestRoom->GetContents())
-    {
-        std::cout << "-" << entity->GetName() << std::endl;
-    }
-
-    TestRoom->AddEntity(Bag); //Add a mew Entity
-    std::cout << "Room:" << TestRoom->GetName() << "-" << TestRoom->GetDescription() << std::endl;
-    std::cout << "Contains" << std::endl;
-
-    for (Entity* entity : TestRoom->GetContents())
-    {
-        std::cout << "-" << entity->GetName() << std::endl;
-    }
-
-    LivingRoom->Update();
-
-    LivingRoom->AddEntity(Bag);
-
-    LivingRoom->Update();*/
 
 
 
