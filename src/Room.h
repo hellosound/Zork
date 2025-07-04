@@ -5,7 +5,7 @@ class Room : public Entity
 {
 public:
 
-    Room(const std::string& name, const std::string& description);
+    Room(const std::string& name, const std::string& description, const bool bShouldCheckObjects);
 
     void Update() override;
 
@@ -21,5 +21,6 @@ public:
 private:
 
     bool bHasObjects = false;
+    bool bTryToCheckObjects = false;
 
 };

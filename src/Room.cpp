@@ -1,24 +1,32 @@
 #include "Room.h"
 #include <iostream>
 
-Room::Room(const std::string& name, const std::string& description)
+
+Room::Room(const std::string& name, const std::string& description, const bool bShouldCheckObjects) 
     : Entity(name, description, Entity::ROOM)
 {
-    bool bHasObjects = false;
+    {
+        bool bHasObjects = false;
+        bTryToCheckObjects = bShouldCheckObjects;
+    }
 }
 
 //---------------------------------------------------------------------------------------------------------------
 void Room::Update()
 {
 	PresentRoom();
-    CheckIfHasObjects();
-    TryListRoomObjects();
+    if (bTryToCheckObjects)
+    {
+        CheckIfHasObjects();
+        TryListRoomObjects();
+    }
+
 }
 
 //---------------------------------------------------------------------------------------------------------------
 void Room::PresentRoom() const
 {
-	std::cout << "You enter to the " << GetName() << ", " << GetDescription() << std::endl;
+	std::cout << "You arrive to the " << GetName() << ", " << GetDescription() << std::endl;
 }
 
 //---------------------------------------------------------------------------------------------------------------
