@@ -12,11 +12,20 @@ public:
 
 	void TryToMoveToRoom(const std::string& direction);
 
+	void TryToPickupItems();
+
+	void PickUpItems();
+
+	bool HasItem(const std::string& itemName);
+
+	Room* GetCurrentRoom() const;
+
 	void Update() override;
 	
 
 private:
 	Room* currentRoom;
-	
+	std::list<Entity*> inventory;
+	bool bHasItem = false;
 };
 

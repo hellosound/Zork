@@ -1,12 +1,13 @@
 #include "Room.h"
 #include <iostream>
+#include "Player.h"
 
 
 Room::Room(const std::string& name, const std::string& description, const bool bShouldCheckObjects) 
     : Entity(name, description, Entity::ROOM)
 {
     {
-        bool bHasObjects = false;
+        bHasObjects = false;
         bTryToCheckObjects = bShouldCheckObjects;
     }
 }
@@ -64,4 +65,3 @@ void Room::TryListRoomObjects()
         }
     }
 }
-
