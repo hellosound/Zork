@@ -1,5 +1,4 @@
-ESCAPING THE HUNTED HOUSE: A ZORK STYLE ADVENTURE
-
+##  ESCAPING THE HUNTED HOUSE: A ZORK STYLE ADVENTURE
 A text-based adventure game created in C++ that pays homage to the classic *Zork*-style gameplay. You will explore a mysterious house, interact with rooms, find items, and try to escape — but beware, not everything is as it seems...
 
 ---
@@ -65,6 +64,23 @@ The game is structured using inheritance and polymorphism. A base class called E
 
 One interesting challenge was implementing the locked north door in the Living Room. Initially, I wanted the player to unlock the door using the magic ring, but managing the locked state became complicated. The final and simpler solution was to not create the north door at all until the player had collected the ring. Once the ring is in the inventory, the door is dynamically added, and the player experiences this as the door being unlocked. This approach, combined with descriptive narrative, maintains immersion while simplifying logic.
 
+---
+
+##  How to Finish the Game
+
+- Start the game and enter your player name.
+
+- Navigate from the Main Entrance to the Living Room.
+
+- Explore until you find the Kitchen, and pick up the Ring when prompted.
+
+- After collecting the Ring, return to the Living Room.
+
+- A previously sealed North door will now be available.
+
+- Enter NORTH to pass through the door and reach the House Exit.
+
+- Enjoy the ending message — you've escaped the House of Horrors!
 
 ---
 
