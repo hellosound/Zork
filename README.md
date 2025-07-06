@@ -1,2 +1,2 @@
 # Zork
-A small Zork -Text Adventure Game- project in C++
+A small style Zork -Text Adventure Game- project in C++
