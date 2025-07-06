@@ -57,6 +57,8 @@ The approach for building this game was "make the tools first, then build the ga
 
 After designing and implementing the Room and Exit classes, I created a graph of the world map to visualize room connectivity and ensure all exits were logically placed.
 
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/f8f74ee7-55ed-49db-947a-d6fba44d8dcf" />
+
 Working with lists and loops was a key part of the development, and this project significantly deepened my understanding of these concepts and their syntax in C++.
 
 The game is structured using inheritance and polymorphism. A base class called Entity represents all interactive objects in the world. Specialized classes like Player and Exit inherit from Entity, allowing each to behave differently while sharing a common interface — a core principle of polymorphism in object-oriented programming.
@@ -66,12 +68,12 @@ One interesting challenge was implementing the locked north door in the Living R
 
 ---
 
-## 📄 License
+##  License
 
 This project is licensed under the **MIT License**. You are free to modify, distribute, and use it for educational purposes.
 
 ---
 
-## 🤝 Credits
+##  Credits
 
 Created by Jose Angulo as the admission test for the Master's in Advanced Programming for AAA Games of the Universitat Politécnica de Catalunya.
