@@ -11,7 +11,7 @@ A text-based adventure game created in C++ that pays homage to the classic *Zork
 - **Language:** English
 - **Author:** Jose Angulo
 - **Institution:**  Universitat Politècnica de Catalunya
-- **GitHub Repository:** [[https://github.com/your-username/Zork](https://github.com/your-username/Zork)](https://github.com/hellosound/Zork/tree/1.0)
+- **GitHub Repository:** https://github.com/hellosound/Zork/tree/main
 - **Release:**: https://github.com/hellosound/Zork/releases/tag/1.0
 - **License:** MIT License
 
